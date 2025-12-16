@@ -131,7 +131,7 @@ export default function HomePage() {
         <main className="min-h-screen bg-gray-100 p-6">
             {/* Backend Status Panel */}
             <div className="mb-4 p-4 bg-white rounded-lg shadow">
-                <h3 className="font-semibold text-gray-700 mb-2">🖥️ Trạng thái Backends:</h3>
+                <h3 className="font-semibold text-gray-700 mb-2">Trạng thái Backends:</h3>
                 <div className="flex flex-wrap gap-2">
                     {BACKEND_URLS.map((url, index) => {
                         const status = backendStatus.find(s => s.url === url);
@@ -147,7 +147,7 @@ export default function HomePage() {
                                         : 'bg-red-100 text-red-700'
                                 }`}
                             >
-                                {isActive && '✓ '} Backend {index + 1}: {status?.healthy ? '🟢 Online' : '🔴 Offline'}
+                                {isActive && '✓ '} Backend {index + 1}: {status?.healthy ? 'Online' : 'Offline'}
                             </div>
                         );
                     })}
@@ -161,13 +161,13 @@ export default function HomePage() {
 
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-3xl font-bold text-blue-600">
-                    📒 Danh sách ghi chú
+                    Danh sách ghi chú
                 </h1>
                 <button
                     onClick={() => setShowAddModal(true)}
                     className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
                 >
-                    ➕ Thêm mới
+                    Thêm mới
                 </button>
             </div>
 
@@ -207,7 +207,7 @@ export default function HomePage() {
                                                 <p className="text-gray-600 mb-4">{note.content}</p>
                                                 <div className="text-sm text-gray-400">
                                                     <p>
-                                                        🕓 Tạo: {new Date(note.createdAt).toLocaleString()}
+                                                        Tạo: {new Date(note.createdAt).toLocaleString()}
                                                     </p>
                                                 </div>
                                             </div>
